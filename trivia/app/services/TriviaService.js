@@ -1,5 +1,6 @@
+// @ts-ignore
 const triviaApi = axios.create({
-  baseURL: 'https://opentdb.com/api.php?amount=10&category=9&difficulty=easy',
+  baseURL: 'https://opentdb.com/api.php?amount=15&type=boolean',
   timeout: 2500
 })
 
