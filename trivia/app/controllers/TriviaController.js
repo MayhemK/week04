@@ -1,5 +1,5 @@
 import { triviaService } from "../services/TriviaService.js";
-
+import { Pop } from "../utils/Pop.js";
 export class TriviaController {
   constructor() {
 
@@ -8,10 +8,11 @@ export class TriviaController {
   }
   async getTriviaQuestions() {
     try {
-      triviaService.getTriviaQuestions()
+      await triviaService.getTrivia()
+      Pop.success('Successful request to get Trivia Questions')
     } catch (error) {
       console.error('could no get Trivia Questions from API', error);
-
+      Pop.error(error, "Could not get Questions!")
     }
   }
 }
