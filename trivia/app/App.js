@@ -1,7 +1,6 @@
-import { ExampleController } from './controllers/ExampleController.js';
-
+import { TriviaController } from "./controllers/TriviaController.js";
 class App {
-
+  triviaController = new TriviaController()
 
 }
 
